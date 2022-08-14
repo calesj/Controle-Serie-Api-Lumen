@@ -3,7 +3,7 @@
 /** @var \Laravel\Lumen\Routing\Router $router */
 
 
-$router->group(['prefix' => 'api/series', 'middleware' => 'auth'], function () use ($router) {
+$router->group(['prefix' => 'api/series', 'middleware' => 'autenticador'], function () use ($router) {
     $router->get('', 'SerieController@index');
     $router->get('{id}', 'SerieController@show');
     $router->post('', 'SerieController@store');
